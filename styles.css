@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Poiret+One&display=swap');
+
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #DCDFD0;
+  color: #355442;
+}
+
+header {
+  background-color: #DCDFD0;
+  color: #355442;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 200px;
+}
+
+nav {
+  display: flex;
+  gap: 2em;
+  padding-right: 1rem;
+}
+
+nav a {
+  color: #355442;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a.current-page {
+  color: #D49853; /* Different color for the current page */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+h1 {
+  color: #355442;
+  text-align: center;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 40px;
+}
+
+p {
+  color: #000000;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  margin-top: 2em;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1em;
+  border-bottom: 1px solid #D49853;
+}
+
+th {
+  background-color: #355442;
+  color: #DCDFD0;
+  font-weight: bold;
+}
+
+td {
+  background-color: #DCDFD0;
+  color: #355442;
+}
+
+/* Add a bit of spacing between rows */
+tr:nth-child(even) {
+  background-color: #8A9B90;
+}
+
+.table_title{
+  font-weight: bold;
+}
+
+
+
+
+/* Style for the variant dropdown */
+.variant-dropdown {
+  margin-top: 10px;
+  margin-left: 3rem;
+  font-weight: bold;
+}
+
+/* Style for the label */
+.variant-dropdown label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* Style for the dropdown select */
+.variant-dropdown select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for the dropdown options */
+.variant-dropdown select option {
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+:not(:defined) > * {
+  display: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+model-viewer {
+  width: 100%;
+  height: 90%;
+  background-color: #DCDFD0;
+}
+
+.Hotspot {
+  background: #fff;
+  border-radius: 32px;
+  border: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 24px;
+  padding: 8px;
+  position: relative;
+  transition: opacity 0.3s;
+  width: 24px;
+}
+
+.Hotspot:not([data-visible]) {
+  background: transparent;
+  border: 4px solid #fff;
+  box-shadow: none;
+  height: 32px;
+  pointer-events: none;
+  width: 32px;
+}
+
+.Hotspot:focus {
+  border: 4px solid #D49853;
+  height: 32px;
+  outline: none;
+  width: 32px;
+}
+
+.Hotspot > * {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.HotspotAnnotation{
+  background: #355442;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: #DCDFD0;
+  display: block;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  left: calc(100% + 1em);
+  max-width: 128px;
+  overflow-wrap: break-word;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 50%;
+  width: max-content;
+}
+
+.Hotspot:not([data-visible]) > * {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(-50% + 4px));
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+
+.progress-bar {
+  display: block;
+  width: 33%;
+  height: 10%;
+  max-height: 2%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  border-radius: 25px;
+  box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.progress-bar.hide {
+  visibility: hidden;
+  transition: visibility 0.3s;
+}
+
+.update-bar {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+  float: left;
+  transition: width 0.3s;
+}
+
+#ar-button {
+  background-image: url(ar_icon.png);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 12px 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  bottom: 16px;
+  padding: 0px 16px 0px 40px;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  color:#4285f4;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  border: 1px solid #DADCE0;
+}
+
+#ar-button:active {
+  background-color: #E8EAED;
+}
+
+#ar-button:focus {
+  outline: none;
+}
+
+#ar-button:focus-visible {
+  outline: 1px solid #4285f4;
+}
+
+@keyframes circle {
+  from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
+  to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+@keyframes elongate {
+  from { transform: translateX(100px); }
+  to   { transform: translateX(-100px); }
+}
+
+model-viewer > #ar-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  animation: elongate 2s infinite ease-in-out alternate;
+  display: none;
+}
+
+model-viewer[ar-status="session-started"] > #ar-prompt {
+  display: block;
+}
+
+model-viewer > #ar-prompt > img {
+  animation: circle 4s linear infinite;
+}

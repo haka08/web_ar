@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo">
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="dining_table.html" >DINING TABLE</a>
+        <a href="couch.html" class="current-page">COUCH</a>
+        <a href="dresser.html">DRESSER</a>
+        <a href="chair.html">CHAIR</a>
+      </nav>
+    </header>
+
+      <h1>Grünes Moos Couch Set</h1>
+    <!-- <model-viewer> HTML element -->
+      <model-viewer id="myModelViewer" src="/assets/Couch.glb" ar ar-modes="webxr scene-viewer quick-look" ios-src="assets\Couch.usdz" camera-controls poster="2.png" shadow-intensity="1.17" exposure="0.71" environment-image="legacy">
+        <button class="Hotspot" slot="hotspot-1" data-position="0.27233491768495893m 0.5787041550468315m 0.8271026330426862m" data-normal="0.14959668173499m -0.1644112951932851m 0.9749819274359637m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Grünes Moos Couch</div>
+        </button><button class="Hotspot" slot="hotspot-2" data-position="-0.696234321751914m 1.0766138913784904m 0.49514183357159014m" data-normal="-0.040902987793785345m 0.493080532313655m 0.8690215959588257m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Arancia Velvet Cushion</div>
+        </button>
+
+       <!-- Variant dropdown menu -->
+       <div class="variant-dropdown">
+        <label for="variantSelector">Style:</label>
+        <select id="variantSelector" onchange="changeVariant(this.value)">
+          <option value="original">Original</option>
+          <option value="Couch_Variant">Metallic Beige</option>
+          
+        </select>
+      </div>
+
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+
+    </model-viewer>
+
+    <div class="container">
+    
+    <h2>Product Specifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table_title">Material</td>
+          <td>
+            <ul>
+              <li>Frame: Sturdy hardwood frame for durability and stability</li>
+              <li>Upholstery: Premium Grünes Moos (Green Moss) fabric for a unique and eco-friendly touch</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Dimensions</td>
+          <td>
+            <ul>
+                  <li>Length: 80 inches</li>
+                  <li>Depth: 36 inches</li>
+                  <li>Height: 32 inches</li>
+                </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Comfort</td>
+          <td>Grünes Moos Couch Set showcases a modern and nature-inspired design, with a distinctive mossy green upholstery that adds a touch of tranquility to any living space.<tr>
+          <td class="table_title">Assembly</td>
+          <td>Straightforward assembly with included instructions and tools for hassle-free setup.</tr>
+    
+        <tr>
+          <td class="table_title">Style</td>
+          <td>Caramel Oak Wooden Dining Table Set features a classic and elegant design with a rich caramel finish, blending seamlessly with various decor styles.</td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Care</td>
+          <td>
+            Regular vacuuming or light brushing to maintain the upholstery's freshness.
+Spot clean with a mild detergent for small stains.
+Professional upholstery cleaning recommended for comprehensive maintenance.
+Avoid direct sunlight to preserve the vibrant color of Grünes Moos fabric.
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Warranty</td>
+          <td>Backed by a 2-year warranty covering manufacturing defects and craftsmanship.</td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  </body>
+</html>

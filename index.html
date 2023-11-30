@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utSf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo">
+      <nav>
+        <a href="index.html" class="current-page">HOME</a>
+        <a href="dining_table.html">DINING TABLE</a>
+        <a href="couch.html">COUCH</a>
+        <a href="dresser.html">DRESSER</a>
+        <a href="chair.html">CHAIR</a>
+      </nav>
+    </header>
+
+    <!-- <model-viewer> HTML element -->
+      <model-viewer id="myModelViewer" src="assets/Hero Shot.glb"  camera-controls poster="5.png" 
+      shadow-intensity="1" 
+      auto-rotate
+      environment-image="music_hall_01_1k.hdr" 
+      exposure="0.81" camera-orbit="-49.99deg 76.61deg 22.42m" field-of-view="22.74deg">
+    
+         
+        <!-- Progress bar -->
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+    
+      </model-viewer>
+    
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  </body>
+</html>

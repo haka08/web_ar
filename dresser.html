@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo">
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="dining_table.html" >DINING TABLE</a>
+        <a href="couch.html">COUCH</a>
+        <a href="dresser.html" class="current-page">DRESSER</a>
+        <a href="chair.html">CHAIR</a>
+      </nav>
+    </header>
+
+      <h1>Miels Derrettida Dresser</h1>
+      <!-- <model-viewer> HTML element -->
+        <model-viewer id="myModelViewer" src="assets/Dresser.glb" ar ar-modes="scene-viewer webxr quick-look" ios-src="assets\Dresser.usdz" camera-controls poster="3.png" shadow-intensity="1" environment-image="music_hall_01_1k.hdr" exposure="0.81" camera-orbit="144.7deg 74.51deg 3.065m" field-of-view="30deg" auto-rotate>
+
+       <button class="Hotspot" slot="hotspot-1" data-position="0.2309421503764436m 0.5042771905806206m -0.06442368416406911m" data-normal="0.9999999999999751m 9.427071261628072e-8m 2.0281593260396136e-7m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Miel derretida Dresser</div>
+        </button><button class="Hotspot" slot="hotspot-2" data-position="0.07799142914268803m 0.8002720764213722m 0.06397095455452598m" data-normal="0.9689324706920559m 0.10224740114802895m -0.22520065763017263m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Azulejo Tranquility Vase</div>
+        </button><button class="Hotspot" slot="hotspot-3" data-position="0.12043010920604719m 0.7201275962693309m -0.12637139544778536m" data-normal="0.512434381992324m 0.24588088010269496m -0.822771898494394m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Indigo Hues Amphora</div>
+        </button>
+
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+
+        <!-- Variant dropdown menu -->
+        <div class="variant-dropdown">
+          <label for="variantSelector">Style:</label>
+          <select id="variantSelector" onchange="changeVariant(this.value)">
+            <option value="original">Original</option>
+            <option value="Dresser_Variant">Ancient Carved</option>
+            
+          </select>
+        </div>
+
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+
+    </model-viewer>
+    
+
+    <div class="container">
+    
+    <h2>Product Specifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table_title">Material</td>
+          <td>
+            <ul>
+              <li>Dresser Frame: Solid Miels Derrettida Wood, known for its exceptional strength and distinctive grain patterns</li>
+              <li>Drawers: Dovetail construction for durability, with metal handles for a modern touch</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Dimensions</td>
+          <td>
+            <ul>
+              <li>Dresser:
+                <ul>
+                  <li>Width: 60 inches</li>
+                  <li>Height: 36 inches</li>
+                  <li>Depth: 18 inches</li>
+                </ul>
+              </li>
+              <li>Drawer Interiors:
+                <ul>
+                  <li>Width: 26 inches</li>
+                  <li>Height: 6 inches</li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Storage</td>
+          <td>Ample storage space with six spacious drawers, providing convenient organization for clothing, accessories, or other belongings.</tr>
+    
+        <tr>
+          <td class="table_title">Assembly</td>
+          <td>Straightforward assembly process with detailed instructions and all necessary hardware included for easy setup.</tr>
+    
+        <tr>
+          <td class="table_title">Care</td>
+          <td>
+            Dust regularly with a soft, dry cloth to maintain the dresser's cleanliness.
+Use a mild wood cleaner for periodic deep cleaning to preserve the wood's luster.
+Avoid direct sunlight and extreme temperatures to prevent any potential damage.
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Warranty</td>
+          <td>Backed by a 1-year warranty covering manufacturing defects and craftsmanship.</td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  </body>
+</html>

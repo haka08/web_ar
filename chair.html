@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utSf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo">
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="dining_table.html">DINING TABLE</a>
+        <a href="couch.html">COUCH</a>
+        <a href="dresser.html">DRESSER</a>
+        <a href="chair.html" class="current-page">CHAIR</a>
+      </nav>
+    </header>
+
+    <h1>Mohagany Curved Wood Chair</h1>
+    <!-- <model-viewer> HTML element -->
+      <model-viewer src="assets/Chair.glb" ar ar-modes="scene-viewer webxr quick-look" ios-src="assets\Chair.usdz" camera-controls poster="4.png" shadow-intensity="1" environment-image="music_hall_01_1k.hdr" auto-rotate camera-orbit="-65.31deg 59.28deg 4.774m" field-of-view="30deg">
+        <button class="Hotspot" slot="hotspot-1" data-position="-0.13020257965700754m 0.6732595190278963m 0.2333395260986777m" data-normal="-0.7615388953485611m -0.18259765626157765m 0.6218654249908675m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Mahogany Curved Wood Chair</div>
+        </button><button class="Hotspot" slot="hotspot-2" data-position="-0.4741626954923103m 0.5999748987569207m -0.3264071110144472m" data-normal="-0.6524043948439016m -0.05312686741161449m 0.756006641205877m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Sahara Sands Vase</div>
+        </button><button class="Hotspot" slot="hotspot-3" data-position="0.22820117100654774m 0.34297277542196236m 0.6521891875606958m" data-normal="-0.5696287011565982m 0.6833682695364031m 0.4566518925937666m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Persian Palace Ewer</div>
+        </button>
+
+
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+
+
+        <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+
+
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+
+
+    </model-viewer>
+    
+
+    <div class="container">
+    
+    <h2>Product Specifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table_title">Material</td>
+          <td> Solid Mahogany Wood, carefully selected for its durability and rich aesthetic
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Dimensions</td>
+          <td>
+                <ul>
+                  <li>Height: 36 inches</li>
+                  <li>Width: 24 inches</li>
+                  <li>Depth: 22 inches</li>
+                  <li>Seat Height: 18 inches</li>
+                </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Cushioning</td>
+          <td>The chair features a contoured seat for natural comfort, complemented by a removable cushion made from high-quality fabric for a touch of luxury.</tr>
+    
+        <tr>
+          <td class="table_title">Assembly</td>
+          <td>Straightforward assembly process; includes detailed instructions and all necessary tools for quick setup.</tr>
+    
+        <tr>
+          <td class="table_title">Style</td>
+          <td>Mahogany Curved Wood Chair boasts a timeless design with its gracefully arched backrest and sleek lines, making it a versatile addition to any interior space.</tr>
+    
+        <tr>
+          <td class="table_title">Care</td>
+          <td>
+            Regular dusting and occasional wiping with a soft, damp cloth for maintenance.
+Use a mild wood cleaner for deep cleaning to preserve the chair's luster.
+Avoid abrasive materials and harsh chemicals to protect the wood's integrity.
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Warranty</td>
+          <td>Backed by a 1-year warranty covering manufacturing defects and craftsmanship.</td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  </body>
+</html>

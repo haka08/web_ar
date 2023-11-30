@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utSf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Logo">
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="dining_table.html" class="current-page">DINING TABLE</a>
+        <a href="couch.html">COUCH</a>
+        <a href="dresser.html">DRESSER</a>
+        <a href="chair.html">CHAIR</a>
+      </nav>
+    </header>
+
+    <h1>Caramel Oak Dining Table Set</h1>
+    <!-- <model-viewer> HTML element -->
+      <model-viewer id="myModelViewer" src="assets/Dining_Table.glb" ar ar-modes="scene-viewer webxr quick-look" ios-src="assets\Dining_Table.usdz" poster="1.png" camera-controls poster="poster.webp" shadow-intensity="1" auto-rotate environment-image="music_hall_01_1k.hdr" exposure="0.81" camera-orbit="-57.65deg 56.86deg 6.341m" field-of-view="30deg">
+        <!-- Hotspot buttons -->
+        <button class="Hotspot" slot="hotspot-1" data-position="0.09761773929745664m 0.42772572856260416m -0.4034668320627362m" data-normal="0.11076269327631427m 0.9938468824613661m 2.7225644697805095e-8m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Caramel Oak Classic Chair</div>
+        </button>
+        <button class="Hotspot" slot="hotspot-2" data-position="0.23726798501182178m 0.592509381293499m 0.2660602664336664m" data-normal="6.005518881684302e-8m 0.9999999999999977m -3.380426663640367e-8m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Caramel Oak Classic Table</div>
+        </button>
+        <button class="Hotspot" slot="hotspot-3" data-position="-0.25170075104851625m 0.6090100489203287m 0.0018618505667561402m" data-normal="0.644423019399925m 0.759948157352701m -0.08483967352434982m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Imperial Plum Blossom Mosaic Bowl</div>
+        </button>
+    
+        <!-- Variant dropdown menu -->
+        <div class="variant-dropdown">
+          <label for="variantSelector">Style:</label>
+          <select id="variantSelector" onchange="changeVariant(this.value)">
+            <option value="original">Original</option>
+            <option value="Dining_Table_Variant">Light Wood</option>
+            
+          </select>
+        </div>
+    
+        <!-- Progress bar -->
+        <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+        </div>
+    
+        <!-- AR button -->
+        <button slot="ar-button" id="ar-button">
+          View in your space
+        </button>
+    
+        <!-- AR prompt -->
+        <div id="ar-prompt">
+          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div>
+      </model-viewer>
+    
+    
+
+    <div class="container">
+   
+    <h2>Product Specifications</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Specification</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table_title">Material</td>
+          <td>
+            <ul>
+              <li>Table and Chairs: Solid Caramel Oak Wood</li>
+              <li>Cushions: High-quality fabric for comfort and durability</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Dimensions</td>
+          <td>
+            <ul>
+              <li>Dining Table:
+                <ul>
+                  <li>Length: 72 inches</li>
+                  <li>Width: 36 inches</li>
+                  <li>Height: 30 inches</li>
+                </ul>
+              </li>
+              <li>Dining Chairs:
+                <ul>
+                  <li>Height: 40 inches</li>
+                  <li>Seat Width: 18 inches</li>
+                  <li>Seat Depth: 20 inches</li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Cushioning</td>
+          <td>Chairs come with plush, foam-filled cushions for added comfort during meals.</td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Assembly</td>
+          <td>Minimal assembly required; includes detailed instructions and necessary tools.</td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Style</td>
+          <td>Caramel Oak Wooden Dining Table Set features a classic and elegant design with a rich caramel finish, blending seamlessly with various decor styles.</td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Care</td>
+          <td>
+            <ul>
+              <li>Wipe clean with a damp cloth for regular maintenance.</li>
+              <li>Use a mild wood cleaner for deeper cleaning.</li>
+              <li>Avoid harsh chemicals to preserve the finish.</li>
+            </ul>
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="table_title">Warranty</td>
+          <td>Backed by a 1-year warranty covering manufacturing defects and craftsmanship.</td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+  </div>
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+  </body>
+</html>
